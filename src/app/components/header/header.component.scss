@@ -1,0 +1,59 @@
+h1 {
+    cursor: default;
+}
+
+.font-clashDisplay {
+    font-family: 'ClashDisplay-Medium';
+}
+
+marquee span {
+    font-family: 'ClashDisplay-Medium';
+}
+
+@keyframes arrow-left {
+    0% {
+        transform: translateX(-10px)
+    }
+
+    100% {
+        transform: translateX(-4px)
+    }
+}
+
+@keyframes arrow-right {
+    0% {
+        transform: translateX(10px)
+    }
+
+    100% {
+        transform: translateX(4px)
+    }
+}
+
+
+h1.relative:hover+div {
+    background-color: aquamarine;
+    opacity: 1;
+    visibility: visible;
+    padding: 5px;
+}
+
+@media(min-width:700px) {
+    h1::before {
+        content: ">> ";
+        margin-right: 1rem;
+        animation: arrow-left 1.5s linear infinite;
+        display: inline-block;
+    }
+
+    h1::after {
+        content: "<< ";
+        margin-left: 1rem;
+        animation: arrow-right 1.5s linear infinite;
+        display: inline-block;
+    }
+
+    nav ul li {
+        border: none;
+    }
+}

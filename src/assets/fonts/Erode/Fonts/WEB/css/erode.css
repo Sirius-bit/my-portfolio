@@ -1,0 +1,24 @@
+/**
+ * @license
+ *
+ * Font Family: Erode
+ * Designed by: Nikhil Ranganathan
+ * URL: https://www.fontshare.com/fonts/erode
+ * © 2023 Indian Type Foundry
+ *
+ * Font Style:
+ * Erode Medium
+ *
+*/
+
+
+@font-face {
+  font-family: 'Erode-Medium';
+  src: url('../fonts/Erode-Medium.woff2') format('woff2'),
+       url('../fonts/Erode-Medium.woff') format('woff'),
+       url('../fonts/Erode-Medium.ttf') format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+

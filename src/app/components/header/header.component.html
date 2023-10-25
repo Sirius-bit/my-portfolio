@@ -1,0 +1,24 @@
+<header class="h-[100px] bg-transparent font-clashDisplay dark:text-white" id="home">
+    <nav class="flex items-center justify-between h-[100%]">
+        <h1 class="w-fit font-extrabold underline underline-offset-8 relative ml-[10%] md-homepage::tracking-[0.35em]">
+            my -
+            portfolio</h1>
+        <div
+            class="shadow-2xl absolute translate-y-[3rem] translate-x-[-.76rem] opacity-0 invisible left-[6.5rem] transition-all duration-300">
+            <p>Welcome to my fantastic portofolio. Enjoy!</p>
+        </div>
+        <span class="min-[700px]:hidden cursor-pointer mr-[12%] hover:text-slate-400 transition-all duration-[800ms]"
+            (click)="menu(this)">Menu</span>
+        <ul
+            class="md:flex md:items-center md:static absolute w-full left-0 md:w-auto md:py-0 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all duration-[800ms] z-10">
+            <li id="dark-mode-toggle" (click)="darkMode()">{{themeString}}</li>
+            <li><a href="#contact">contact-me</a></li>
+        </ul>
+    </nav>
+</header>
+<marquee direction="left"
+    class=" text-white bg-slate-800 text-xl bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 hover:bg-gradient-to-r hover:from-red-400 hover:via-yellow-400 hover:to-green-400 hover:cursor-none transition-all duration-300">
+    <span *ngFor="let i of marquee">{{i}}</span>
+    <span *ngFor="let i of marquee">{{i}}</span>
+    <span *ngFor="let i of marquee">{{i}}</span>
+</marquee>

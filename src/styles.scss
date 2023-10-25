@@ -1,1 +1,255 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'tailwindcss/variants';
+
+
+@layer base {
+    marquee span {
+        height: fit-content;
+        transform: rotate(90deg);
+        margin-bottom: 15rem;
+        font-size: 1rem;
+        font-family: Roboto;
+        font-weight: bolder;
+        letter-spacing: .4rem;
+        margin-right: 1.3rem;
+    }
+
+    .mobile {
+        @apply flex flex-col items-center
+    }
+
+    .p {
+        @apply col-span-full mb-10 font-mono mt-10 text-center;
+    }
+
+    .shadow-theme-dark {
+        box-shadow: 0px 9px 5px 0px rgba(196, 36, 36, 0.96);
+        -webkit-box-shadow: 0px 9px 16px 0px rgba(196, 36, 36, 0.96);
+        -moz-box-shadow: 0px 9px 16px 0px rgba(196, 36, 36, 0.96);
+    }
+
+    .shadow-theme-green-dark {
+        box-shadow: 0px 9px 5px 0px rgba(183, 196, 36, 0.96);
+        -webkit-box-shadow: 0px 9px 16px 0px rgba(183, 196, 36, 0.96);
+        -moz-box-shadow: 0px 9px 16px 0px rgba(183, 196, 36, 0.96);
+    }
+
+
+    .bg-icon {
+        width: 34px;
+        aspect-ratio: 1/1;
+        padding: 10px;
+        background: no-repeat center;
+        @apply bg-mystery bg-cover cursor-pointer;
+
+        &:hover {
+            opacity: 1;
+            transition-duration: 300ms;
+        }
+
+    }
+
+    nav ul li {
+        padding: 15px;
+        text-align: start;
+        margin-right: 1rem;
+
+        &:not(li:last-of-type) {
+            border-bottom: 1px solid black;
+        }
+
+        &:hover {
+            transition-duration: 300ms;
+            color: cadetblue;
+            cursor: pointer;
+        }
+    }
+}
+
+@font-face {
+    font-family: 'Satoshi-Bold';
+    src: url('../src/assets/fonts/Satoshi/Fonts/WEB/fonts/Satoshi-Bold.woff2') format('woff2'),
+        url('../src/assets/fonts/Satoshi/Fonts/WEB/fonts/Satoshi-Bold.woff') format('woff'),
+        url('../src/assets/fonts/Satoshi/Fonts/WEB/fonts/Satoshi-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Erode-Medium';
+    src: url('../src/assets/fonts/Erode/Fonts/WEB/fonts/Erode-Medium.woff2') format('woff2'),
+        url('../src/assets/fonts/Erode/Fonts/WEB/fonts/Erode-Medium.woff') format('woff'),
+        url('../src/assets/fonts/Erode/Fonts/WEB/fonts/Erode-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClashDisplay-Medium';
+    src: url('../src/assets/fonts/ClashDisplay/Fonts/WEB/fonts/ClashDisplay-Medium.woff2') format('woff2'),
+        url('../src/assets/fonts/ClashDisplay/Fonts/WEB/fonts/ClashDisplay-Medium.woff') format('woff'),
+        url('../src/assets/fonts/ClashDisplay/Fonts/WEB/fonts/ClashDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    transition: all 300ms ease-in-out;
+    font-family: 'Satoshi-Bold';
+}
+
+.dark {
+    background-color: #1a202c;
+    color: #ffffff;
+    border-color: #fff;
+}
