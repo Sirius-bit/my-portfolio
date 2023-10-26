@@ -10,13 +10,12 @@ import { HomeService } from 'src/app/services/home.service'
 
 export class HomepageComponent {
 
-  constructor(protected obj: HomeService) {
+  constructor(protected home: HomeService) {
     this.check = new Image()
     this.check.src = environment.urlCheck
     this.me = new Image()
     this.me.src = environment.urlMe
   }
-
   protected color: string[] = ['red', 'yellow', 'orange']
   protected check: HTMLImageElement
   protected me: HTMLImageElement

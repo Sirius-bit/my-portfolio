@@ -7,6 +7,9 @@ import { environment } from '../enviroments/environment';
 })
 export class HomeService {
 
+  instagram: string = `${environment.instagramLink}`
+  linkedin: string = `${environment.linkedinLink}`
+  github: string = `${environment.githubLink}`
 
   experiences: Experiences[] = [
     {
