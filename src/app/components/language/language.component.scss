@@ -47,12 +47,13 @@ img:not(.img) {
 }
 
 .circle-to-rectangle:hover {
-    width: 190px;
+    width: 180px;
     clip-path: inset(0% 0% 0% 0% round 10% 10%);
     border-width: 2px;
 }
 
 .circle-to-rectangle:hover span {
+    transition: all 300ms ease-in-out;
     opacity: 1;
 }
 

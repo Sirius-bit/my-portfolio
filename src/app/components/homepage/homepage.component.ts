@@ -19,7 +19,6 @@ export class HomepageComponent {
   }
   protected check: HTMLImageElement
   public me: HTMLImageElement
-  protected color: string[] = ['red', 'yellow', 'orange']
   private condition: any = "this.contains(check) ? 'è stato usato per questo sito' : null"
 
   @HostListener('window:scroll', ['$event'])
