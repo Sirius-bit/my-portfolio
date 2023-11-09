@@ -1,0 +1,46 @@
+<div class="md-homepage:grid md-homepage:grid-cols-4 lg:col-span-4 gap-8">
+    <p class="p text-3xl transition-all duration-300 col-span-full font-satoshi mx-auto rounded-xl" id="cond"></p>
+    <div
+        class="grid grid-cols-2 place-items-center gap-6 language-container p-6 rounded-3xl font-mono dark:shadow-theme-dark">
+        <p class="col-span-2 font-satoshi">moduli opzionali</p>
+        <div *ngFor="let module of home.optionalModule; let i = index"
+            class="module cursor-pointer p-6 rounded-3xl flex flex-col justify-center items-center gap-4 relative"
+            [ngClass]="{'col-span-full' : i === 2}">
+            <img class=" cursor-pointer font-erode" [src]="module.url" [title]="module.title">
+            <img [src]="check.src" alt=""
+                class="w-[20px] aspect-[1/1] img absolute top-[50%] left-[70%] opacity-0 invisible"
+                [ngClass]="{'check' : [1].includes(i)}">
+            <p class="opacity-0 invisible font-erode">{{module.title}}</p>
+        </div>
+    </div>
+    <section
+        class="shadow-2xl p-6 rounded-3xl  leading-5 md-homepage:flex md-homepage:flex-row-reverse justify-evenly items-center md-homepage::col-start-2 md-homepage:col-span-3 dark:shadow-theme-green-dark"
+        *ngFor="let section of [0, 1]; let i = index" [ngClass]="{'backEnd' : i === 1}">
+        <div class="text-center">
+            <p class="text-3xl sm:mt-5 md-homepage:text-5xl mb-3 font-satoshi">{{i === 0 ? "front - end" : "back
+                -end"}}
+            </p>
+            <p class="text-2xl mb-3 font-satoshi">IDE</p>
+            <p class="font-satoshi">{{i === 0 ? 'Visual Studio Code' : 'Eclipse Spring Tool Suite'}}
+            </p>
+        </div>
+        <div class="grid grid-cols-2 place-items-center gap-6 language-container md-homepage:w-2/3">
+            <div class="cursor-pointer p-6 rounded-3xl circle-to-rectangle flex justify-between items-center relative divImg"
+                *ngFor="let language of (i === 0 ? home.front_end : home.back_end); let j = index" [ngClass]="{
+                'col-span-full' : home.front_end && i === 0 && j === 6 || home.back_end && i === 1  && j === 2
+            }">
+                <img [src]="language.url" [title]="language.title" id="language">
+                <img [src]="check.src" alt=""
+                    class="w-[20px] aspect-[1/1] img absolute bottom-[10%] left-[70%] opacity-0 invisible"
+                    [ngClass]="{'check' : home.front_end && i === 0}">
+                <span class="block opacity-0 font-satoshi">{{language.title}}</span>
+            </div>
+        </div>
+    </section>
+    <div
+        class="flex flex-col items-center justify-center gap-6 language-container p-6 rounded-3xl font-satoshi module dark:shadow-theme-dark">
+        <p>VCS</p>
+        <img class="cursor-pointer" [src]="home.VCS" [alt]="home.VCS" title="Git">
+        <p class="opacity-0 invisible font-erode">Git</p>
+    </div>
+</div>

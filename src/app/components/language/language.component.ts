@@ -1,25 +1,17 @@
-import { Component, HostListener } from '@angular/core'
-import { environment } from 'src/app/enviroments/environment'
-import { HomeService } from 'src/app/services/home.service'
+import { Component, HostListener, Input } from '@angular/core';
+import { HomeService } from 'src/app/services/home.service';
 
 @Component({
-  selector: 'app-homepage',
-  templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.scss']
+  selector: 'app-language',
+  templateUrl: './language.component.html',
+  styleUrls: ['./language.component.scss']
 })
+export class LanguageComponent {
 
-export class HomepageComponent {
+  constructor(protected home: HomeService) { }
 
-  constructor(protected home: HomeService) {
-    this.me = new Image()
-    this.me.src = environment.urlMe
-    this.check = new Image()
-    this.check.src = environment.urlCheck
+  @Input() check!: HTMLImageElement
 
-  }
-  protected check: HTMLImageElement
-  public me: HTMLImageElement
-  protected color: string[] = ['red', 'yellow', 'orange']
   private condition: any = "this.contains(check) ? 'è stato usato per questo sito' : null"
 
   @HostListener('window:scroll', ['$event'])
@@ -77,5 +69,5 @@ export class HomepageComponent {
       p.innerText = ''
     }
   }
-}
 
+}

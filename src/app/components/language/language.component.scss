@@ -1,0 +1,87 @@
+.language-container div {
+    transition: all .3s ease-in-out;
+}
+
+.font-erode {
+    font-family: 'Erode-Medium';
+}
+
+.font-satoshi {
+    font-family: 'Satoshi-Bold';
+}
+
+.font-clashDisplay {
+    font-family: 'ClashDisplay-Medium';
+}
+
+img:not(.img) {
+    width: 60px;
+}
+
+.text-condition {
+    background-color: red;
+    padding: 1rem;
+    color: #fff;
+}
+
+.experience-img {
+    border: 1.3px solid black;
+}
+
+.experience-circle {
+    order: 2;
+    border-radius: 0;
+    rotate: 45deg;
+
+    img {
+        rotate: -45deg;
+    }
+}
+
+.circle-to-rectangle {
+    width: 100px;
+    height: 100px;
+    transition: all 300ms ease-in-out;
+    clip-path: circle(50% at 50% 50%);
+    overflow: hidden;
+}
+
+.circle-to-rectangle:hover {
+    width: 190px;
+    clip-path: inset(0% 0% 0% 0% round 10% 10%);
+    border-width: 2px;
+}
+
+.circle-to-rectangle:hover span {
+    opacity: 1;
+}
+
+.backEnd {
+    grid-column-start: 1;
+    grid-column: span 3 / span 3;
+    flex-direction: row;
+}
+
+.module,
+.module p {
+    transition: all 300ms ease-in-out;
+}
+
+.module:hover p {
+    opacity: 1;
+    visibility: visible;
+}
+
+ul li {
+    margin-bottom: .5rem;
+}
+
+.divImg:hover img:nth-of-type(2) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.check {
+    opacity: 1;
+    visibility: visible;
+}

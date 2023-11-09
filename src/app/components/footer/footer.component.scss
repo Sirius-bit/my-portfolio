@@ -1,0 +1,21 @@
+.font-erode {
+    font-family: 'Erode-Medium';
+}
+
+.font-satoshi {
+    font-family: 'Satoshi-Bold';
+}
+
+.font-clashDisplay {
+    font-family: 'ClashDisplay-Medium';
+}
+
+#scrollUp::before {
+    content: "←";
+    display: inline-block;
+    margin-right: .8rem;
+}
+
+#scrollUp {
+    rotate: (90deg);
+}
