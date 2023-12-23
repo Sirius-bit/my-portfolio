@@ -15,12 +15,12 @@ export class HomepageComponent {
     this.me.src = environment.urlMe
     this.check = new Image()
     this.check.src = environment.urlCheck
-
   }
   protected check: HTMLImageElement
   public me: HTMLImageElement
-  private condition: any = "this.contains(check) ? 'è stato usato per questo sito' : null"
+  private condition: any = "this.includes(check) ? 'è stato usato per questo sito' : null"
 
+  // FUNZIONE CHE GESTISCE LA SCRITTURA DI CONDITION
   @HostListener('window:scroll', ['$event'])
   onScroll() {
     const scrollTop = window.scrollY

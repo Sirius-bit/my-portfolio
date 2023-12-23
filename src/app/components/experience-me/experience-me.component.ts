@@ -11,7 +11,4 @@ export class ExperienceMeComponent {
   constructor(protected home: HomeService) { }
 
   @Input() me!: HTMLImageElement;
-
-
-
 }

@@ -120,5 +120,4 @@ export class HomeService {
       url: `${environment.urlBackgroundStory}programming.png`
     }
   ]
-
 }
